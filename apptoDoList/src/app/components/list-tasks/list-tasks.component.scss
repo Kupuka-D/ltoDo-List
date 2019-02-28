@@ -1,0 +1,19 @@
+@import '../update-task/update-task.component.scss';
+$colorRelleno: #4d3c09;
+$colorText:white;
+thead {
+    background: $colorRelleno;
+    color: $colorText;
+}
+
+.container {
+    padding: 0px;
+}
+
+tbody {
+    background: #ffff00a1;
+}
+
+p {
+    font-size: 18px;
+}

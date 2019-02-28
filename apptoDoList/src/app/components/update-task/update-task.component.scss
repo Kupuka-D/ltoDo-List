@@ -1,0 +1,30 @@
+$colorRelleno: #4d3c09;
+$colorText:white;
+button {
+    display: inline-block;
+    background: $colorRelleno;
+    color: $colorText;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 2px;
+    padding: 5px 15px;
+    margin-right: 7px;
+}
+
+button:hover {
+    cursor: pointer;
+    opacity: .8;
+}
+
+.mensage {
+    margin-top: 20px;
+    font-size: 30px;
+}
+
+p#ok {
+    color: green;
+}
+
+p#err {
+    color: red;
+}

@@ -1,0 +1,24 @@
+/*Estilos principales*/
+
+$colorRelleno: #4d3c09;
+@import './components/update-task/update-task.component.scss';
+@import './components/new-task/new-task.component.scss';
+@import './components/list-tasks/list-tasks.component.scss';
+nav {
+    margin: 20px;
+    background: $colorRelleno;
+}
+
+a {
+    color: white;
+}
+
+a:hover {
+    cursor: pointer;
+    cursor: pointer;
+    opacity: .8;
+}
+
+header {
+    margin-bottom: 50px;
+}

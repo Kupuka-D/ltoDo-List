@@ -1,0 +1,23 @@
+<!--#taskForm es el nombre del formulario y con el evento ngsubmit le digo que metodo ejecutar y le paso como parametro el form-->
+<div class="container">
+    <form>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Titulo</label>
+            <input type="text" value={{task.titulo}} class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingrese el título" name="titulo" #titulo="ngModel" [(ngModel)]="task.titulo" required>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Descripción</label>
+            <input type="text" value={{task.descripcion}} class="form-control" id="exampleInputPassword1" placeholder="Descripcion" name="descripcion" #descripcion="ngModel" [(ngModel)]="task.descripcion" required>
+            <small id="emailHelp" class="form-text text-muted">Puede ingresar una descripcion si quiere</small>
+        </div>
+        <button (click)="updateTask()" id="button">Actualizar</button>
+    </form>
+
+    <div *ngIf="status == 'success'">
+        <p class="mensage" id="ok">Su tarea fue actualizada correctamente</p>
+
+    </div>
+    <div *ngIf="status == 'error'">
+        <p class="mensage" id="err">Se produjo un error al actualizar la tarea</p>
+    </div>
+</div>

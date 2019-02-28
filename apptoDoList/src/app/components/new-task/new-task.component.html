@@ -1,0 +1,39 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+
+
+<div class="container">
+    <h1>Agregue su tarea</h1>
+    <br>
+    <p><em>Aquí usted puede crear sus tareas</em></p>
+
+
+    <!--#taskForm es el nombre del formulario y con el evento ngsubmit le digo que metodo ejecutar y le paso como parametro el form-->
+    <form #taskForm="ngForm" (ngSubmit)="onSubmit(taskForm)">
+        <div class="form-group">
+            <label for="exampleInputEmail1">Titulo</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingrese el título" name="titulo" #titulo="ngModel" [(ngModel)]="task.titulo" required>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Descripción</label>
+            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Descripcion" name="descripcion" #descripcion="ngModel" [(ngModel)]="task.descripcion" required>
+            <small id="emailHelp" class="form-text text-muted">Puede ingresar una descripcion si quiere</small>
+        </div>
+        <button type="submit" id="button">Agregar</button>
+    </form>
+
+    <div *ngIf="status == 'success'">
+        <p class="mensage" id="ok">Su tarea fue guardada correctamente
+            <br> Puede verla
+            <a [routerLink]="['/list-tasks']">aquí</a>
+        </p>
+    </div>
+
+    <div *ngIf="status == 'error'">
+        <p class="mensage" id="err">Se produjo un error al guardar la tarea</p>
+    </div>
+
+
+
+
+</div>
